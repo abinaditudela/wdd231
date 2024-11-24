@@ -116,6 +116,7 @@ main > .card:nth-child(3){
 #head-tags{
     border-bottom: 1px solid black;
     display: flex;
+    gap: 20px;
     flex-shrink: 1;
 }
 
@@ -123,27 +124,27 @@ main > .card:nth-child(3){
     background-color: black;
     color: #ffffff;
     border-radius: 5px;
-    padding: 4px 50px;
+    padding: 12px 50px;
     margin: 8px 3px;
     font-weight: 600;
 }
 
 #head-tags button:hover{
-    background-color: #EDE627;
-    color: black;
+    background-color: #164c70;
+    color: #fff;
     border: 1px solid rgb(130, 130, 130);
 }
 
 #sub-tags{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     margin: 20px 10px 10px;
 }
 
 #sub-tags .course-card.completed{
-    background-color: #005a27;
+    background-color: rgba(8, 118, 43, 0.941);
     border-color: #000000;
     border-radius: 5px;
     text-align: center;
@@ -152,7 +153,7 @@ main > .card:nth-child(3){
 } 
 
 #sub-tags .course-card.not-completed{
-    background-color: #b40606;
+    background-color: #a42626;
     border-color: #fff;
     border-radius: 5px;
     text-align: center;
@@ -232,29 +233,68 @@ h3{
 }
 /* NEW */
 
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    main{
+        display: block;
+    }
+    .card:nth-child(1){
+        min-height: 200px;
+    }
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 170px;
+        right: 0;
+        background-color: steelblue;
+        width: 100%;
+        z-index: 10;
+    }
 
+    nav.open {
+        display: flex;
+    }
 
+    #menu-button {
+        display: block !important;
+    }
 
-/* MENU */
+    #head-tags{
+        font-size: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 15px;
+        gap: 0px;
+    }
+    
+    #sub-tags{
+        grid-template-columns: 1fr;
+    }
+
+    #sub-tags {
+        font-size: 1rem;
+    }
+}
 
 #menu-button {
+    display: none; /* Escondido por defecto en pantallas grandes */
     position: absolute;
-    font-size: 1.75em;
+    font-size: 2rem;
     background: none;
     border: none;
-    color: #fff;
+    color: white;
     cursor: pointer;
-    top: 0.75rem;
-    right: 0.75rem;
-    padding-top: 24px;
+    right: 40px;
+    top: 60px;
 }
 
 #menu-button::before {
-    content: "☰";
+    content: "☰"; /* Ícono hamburguesa */
 }
 
 #menu-button.open::before {
-    content: "X";
-    justify-self: left;
+    content: "✖"; /* Ícono cerrar */
+    /* justify-self: left; */
 }
 
