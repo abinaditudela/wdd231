@@ -89,7 +89,7 @@ main > .card img{
     /* float: right; */
 }
 
-figcaption{
+figcaption, #credits{
     text-align: center;
     margin: 5px 20px 20px;
     font-size: 1.5rem;
@@ -186,18 +186,9 @@ main > .card:nth-child(3){
     padding-top: 15px;
     padding-left: 40px;
 }
-/* .flex-container{
-flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 1.5rem;}
-    
-.list{
-    padding: 20px 20px 20px 40px !important;
-    line-height: 50px;
-
-} */
+#courses{
+    padding-bottom: 15px;
+}
 p{
     padding: 0;
     margin: 1rem;
