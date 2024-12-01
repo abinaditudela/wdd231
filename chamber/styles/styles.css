@@ -1,0 +1,156 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #006699;
+    color: white;
+}
+
+header img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+header h1 {
+    margin: 0.5rem 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: #004d80;
+    padding: 0.5rem 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Directory Section */
+#directory {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Button Styling */
+#toggleView {
+    display: block;
+    margin: 1rem auto;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #007acc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#toggleView:hover {
+    background-color: #005f99;
+}
+
+/* Card View */
+.card-view .business-card {
+    display: inline-block;
+    width: 300px;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card-view .business-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+
+/* List View */
+.list-view .business-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.list-view .business-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .card-view .business-card {
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .list-view .business-card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    #toggleView {
+        width: 90%;
+    }
+
+    .card-view .business-card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #004d80;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer img {
+    width: 20px;
+    height: 15px;
+    margin-left: 0.5rem;
+}
+
+footer p {
+    margin: 0;
+}
