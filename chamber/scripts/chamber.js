@@ -7,6 +7,7 @@ document.getElementById('menu-toggle').addEventListener('click', () => {
 const apiKey = "857456a7252a4af33fdf44440c4ec1d5";//"YOUR_API_KEY";
 const city = "Cochabamba";
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
 
 async function fetchWeather() {
     const response = await fetch(apiUrl);
@@ -17,7 +18,36 @@ async function fetchWeather() {
     document.getElementById("weather-description").textContent = capitalizeWords(data.weather[0].description);
 }
 
+// Fetch 3-day forecast
+async function fetchForecast() {
+    const response = await fetch(forecastUrl);
+    const data = await response.json();
+    
+    const forecastContainer = document.getElementById("forecast");
+    forecastContainer.innerHTML = ""; // Limpiar contenido previo
+
+    // Filtrar el pronóstico para obtener datos en intervalos de 24 horas
+    const forecastData = data.list.filter(item => item.dt_txt.includes("12:00:00")).slice(0, 3);
+
+    // Crear elementos HTML para cada día
+    forecastData.forEach(day => {
+        const date = new Date(day.dt_txt).toLocaleDateString("en-US", { weekday: "long", month: "short", day: "numeric" });
+        const iconUrl = `https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
+        const description = capitalizeWords(day.weather[0].description);
+        const temp = day.main.temp.toFixed(0) + " °C";
+
+        forecastContainer.innerHTML += `
+            <div class="forecast-day">
+                <h4>${date}</h4>
+                <img src="${iconUrl}" alt="${description}">
+                <p>${description}</p>
+                <p>${temp}</p>
+            </div>`;
+    });
+}
+
 fetchWeather();
+fetchForecast();
 
 function capitalizeWords(str) {
     return str
