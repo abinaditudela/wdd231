@@ -1,0 +1,53 @@
+{
+    "members": [
+      {
+        "name": "Cochabamba Café",
+        "category": "Restaurant",
+        "address": "Av. Heroínas 123, Cochabamba",
+        "phone": "+591 123 45678",
+        "logo": "images/cochabamba-cafe.jpeg",
+        "membership": "Premium"
+      },
+      {
+        "name": "Tech Solutions",
+        "category": "Technology Services",
+        "address": "Calle Tarija 456, Cochabamba",
+        "phone": "+591 789 12345",
+        "logo": "images/tech-solutions.png",
+        "membership": "Gold"
+      },
+      {
+        "name": "Green Agriculture",
+        "category": "Agricultural Products",
+        "address": "Km 7.5 Carretera Sacaba, Cochabamba",
+        "phone": "+591 456 78901",
+        "logo": "images/green-agriculture.jpg",
+        "membership": "Premium"
+      },
+      {
+        "name": "Bolivia Export",
+        "category": "Export Services",
+        "address": "Calle Ayacucho 789, Cochabamba",
+        "phone": "+591 333 67890",
+        "logo": "images/bolivia-export.png",
+        "membership": "Gold"
+      },
+      {
+        "name": "Andes Market",
+        "category": "Supermarket",
+        "address": "Av. Blanco Galindo Km 5, Cochabamba",
+        "phone": "+591 987 65432",
+        "logo": "images/andes-market.jpeg",
+        "membership": "Basic"
+      },
+      {
+        "name": "Eco Energy",
+        "category": "Renewable Energy",
+        "address": "Calle Sucre 159, Cochabamba",
+        "phone": "+591 567 89012",
+        "logo": "images/eco-energy.jpg",
+        "membership": "Premium"
+      }
+    ]
+  }
+  

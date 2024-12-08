@@ -1,75 +1,146 @@
-/* General Reset */
-body {
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Play&display=swap');
+
+:root {
+
+    --heading-font: "Play", sans-serif;
+    --paragraph-font: "Oswald", sans-serif;}
+
+*{
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+/* General Styles */
+body {
+    font-family: var(--heading-font);
+    margin: 0;
+    padding: 0;
     background-color: #f9f9f9;
     color: #333;
 }
 
 header {
-    text-align: center;
-    padding: 1rem 0;
     background-color: #006699;
-    color: white;
+    color: #09244e;
+    padding: 1rem;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+.logo-container img{
+    max-width: 200px;
 }
 
 header h1 {
-    margin: 0.5rem 0;
+    margin: 0;
+    font-size: 2rem;
 }
 
 /* Navigation */
+#menu-toggle {
+    display: none; /* Escondido por defecto en pantallas grandes */
+    position: absolute;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #09244e;
+    cursor: pointer;
+    left: 40px;
+    top: 60px;
+}
+
 nav {
+    background-color: #333;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    background-color: #004d80;
-    padding: 0.5rem 0;
 }
 
 nav a {
+    padding: 15px 15px;
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1.5rem;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #09244e;
+    background-color: #186dcc;
 }
-
-/* Directory Section */
-#directory {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+/* *************STYLES FOR HOME PAGE*************** */
+/* Hero Section */
+#banner {
+    position: relative;
     text-align: center;
 }
 
-/* Button Styling */
-#toggleView {
+#banner img {
+    width: 100%;
+    max-height: 800px;
+    object-fit: cover;
+}
+
+.cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cta-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Info Section */
+#info-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.info-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Button Styles */
+button {
     display: block;
     margin: 1rem auto;
-    padding: 0.8rem 1.5rem;
+    padding: 0.7rem 1.5rem;
     font-size: 1rem;
-    font-weight: bold;
+    background-color: #007BFF;
     color: white;
-    background-color: #007acc;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
-#toggleView:hover {
-    background-color: #005f99;
+button:hover {
+    background-color: #0056b3;
 }
 
+/* Directory Styles - Card View */
+.directory {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* Card View */
 .card-view .business-card {
     display: inline-block;
@@ -90,67 +161,143 @@ nav a:hover {
     margin-bottom: 1rem;
     border-radius: 50%;
 }
+/* .business-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.business-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.business-card img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.business-card h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #007BFF;
+}
+
+.business-card p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #666;
+} */
 
 /* List View */
-.list-view .business-card {
+.list-view .directory {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.list-view .business-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .list-view .business-card img {
     width: 60px;
     height: 60px;
-    margin-bottom: 0.5rem;
+    margin-right: 1rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
-/* Responsive Design */
+.list-view .business-card div {
+    flex-grow: 1;
+}
+
+.list-view .business-card div h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.list-view .business-card div p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
-    .card-view .business-card {
-        width: 90%;
-        margin: 1rem auto;
+    #menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+    }
+    nav a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .directory {
+        grid-template-columns: 1fr;
     }
 
     .list-view .business-card {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
+    }
+
+    .list-view .business-card img {
+        margin-bottom: 0.5rem;
+    }
+
+    .list-view .business-card div {
+        text-align: center;
     }
 }
 
-@media screen and (max-width: 480px) {
-    nav {
-        flex-direction: column;
-    }
 
-    #toggleView {
-        width: 90%;
-    }
 
-    .card-view .business-card {
-        width: 100%;
-    }
-}
-
-/* Footer */
+/* Footer Styles */
 footer {
-    background-color: #004d80;
+    background-color: #333;
     color: white;
+    padding: 1rem;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.social-links img {
+    width: 25px;
 }
 
 footer img {
-    width: 20px;
-    height: 15px;
-    margin-left: 0.5rem;
+    width: 25px;
+    height: auto;
+    vertical-align: middle;
 }
 
 footer p {
-    margin: 0;
+    margin: 0.5rem 0;
 }
