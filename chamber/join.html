@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--June st 2024-->
+
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Cochabamba Chamber of Commerce - Membership Application>
+    <meta name="author" content="Adan Tudela">
+    <meta property="og:title" content="Cochabamba Chamber of Commerce Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://abinaditudela.github.io/wdd231/chamber/camaracomercio.jpg">
+    <meta property="og:url" content="https://abinaditudela.github.io/wdd231/chamber/directory.html">
+    <link rel="icon" href="favicon.ico">
+    <title>Join Us| Cochabamba Chamber of Commerce </title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/join.js"></script>
+</head>
+
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/chamber-logo-cut.png" alt="Cochabamba Chamber Logo" class="profile-pic">
+            <h1>Cochabamba Chamber of Commerce</h1>
+        </div>
+    </header>
+        <button id="menu-toggle">☰</button>
+        <nav id="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="#">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="#">Join</a>
+        </nav>
+    
+    [⚠️ Suspicious Content]     <main class="join-container">
+        <h2>Become a Member</h2>
+        
+        <form id="join-form" method="get" action="thankyou.html">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label>
+                    First Name*:
+                    <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
+                </label>
+                <label>
+                    Last Name*:
+                    <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+                </label>
+                <label>
+                    Title:
+                    <input type="text" name="title" autocomplete="organization-title" 
+                           pattern="[a-zA-Z\- ]{7,}" title="7+ alpha characters, hyphens or spaces">
+                </label>
+                <label>
+                    Email*:
+                    <input type="email" name="email" required autocomplete="email" 
+                           placeholder="example@domain.com" title="Enter your email address">
+                </label>
+                <label>
+                    Mobile Phone*:
+                    <input type="tel" name="phone" required autocomplete="tel" title="Enter your phone number">
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Business Information</legend>
+                <label>
+                    Business/Organization Name*:
+                    <input type="text" name="business" required autocomplete="organization" title="Enter your business name">
+                </label>
+                <label>
+                    Business Description:
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+                <label>
+                    Membership Level*:
+                    <select name="membership" required title="Select membership level">
+                        <option value="">Select One...</option>
+                        <option value="np">NP Membership (Non-Profit - Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+                <input type="hidden" name="timestamp" id="timestamp">
+            </fieldset>
+
+            <button type="submit">Submit Application</button>
+        </form>
+
+        <section class="membership-cards">
+            <article class="card" data-level="np">
+                <h3>NP Membership</h3>
+                <p>For non-profit organizations</p>
+                <button class="info-btn">View Benefits</button>
+            </article>
+            <article class="card" data-level="bronze">
+                <h3>Bronze Membership</h3>
+                <p>Basic business benefits</p>
+                <button class="info-btn">View Benefits</button>
+            </article>
+            <article class="card" data-level="silver">
+                <h3>Silver Membership</h3>
+                <p>Enhanced business benefits</p>
+                <button class="info-btn">View Benefits</button>
+            </article>
+            <article class="card" data-level="gold">
+                <h3>Gold Membership</h3>
+                <p>Premium business benefits</p>
+                <button class="info-btn">View Benefits</button>
+            </article>
+        </section>
+    </main>
+
+    <!-- Membership Benefit Modals -->
+    <dialog id="np-modal">
+        <h3>NP Membership Benefits</h3>
+        <ul>
+            <li>Free listing in directory</li>
+            <li>Access to member resources</li>
+            <li>Non-profit networking events</li>
+        </ul>
+        <button class="close-btn">Close</button>
+    </dialog>
+
+    <dialog id="bronze-modal">
+    <h3>Bronze Membership Benefits</h3>
+    <ul>
+        <li>Business listing in directory</li>
+        <li>Monthly networking events</li>
+        <li>10% discount on chamber events</li>
+    </ul>
+    <button class="close-btn">Close</button>
+    </dialog>
+
+    <dialog id="silver-modal">
+        <h3>Silver Membership Benefits</h3>
+        <ul>
+            <li>All Bronze benefits</li>
+            <li>Featured listing in directory</li>
+            <li>20% discount on chamber events</li>
+            <li>Quarterly business training</li>
+        </ul>
+        <button class="close-btn">Close</button>
+    </dialog>
+
+    <dialog id="gold-modal">
+        <h3>Gold Membership Benefits</h3>
+        <ul>
+            <li>All Silver benefits</li>
+            <li>Homepage spotlight rotation</li>
+            <li>30% discount on chamber events</li>
+            <li>Priority event registration</li>
+            <li>Annual business consultation</li>
+        </ul>
+        <button class="close-btn">Close</button>
+    </dialog>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Adan Tudela, Cochabamba, Bolivia</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+        <div class="social-links">
+            <a href="#" target="_blank"><img src="images/facebook-icon.webp" alt="Facebook"></a>
+            <a href="#" target="_blank"><img src="images/instagram-icon.webp" alt="Instagram"></a>
+            <a href="#" target="_blank"><img src="images/twitter-icon.webp" alt="Twitter"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
