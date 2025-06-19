@@ -1,0 +1,258 @@
+/* BASE STYLES */
+:root {
+    --primary-green: #2e8b57;
+    --secondary-blue: #4682b4;
+    --accent-orange: #ff8c00;
+    --light-beige: #f5f5dc;
+    --dark-gray: #333333;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--light-beige);
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary-green);
+    margin-bottom: 1rem;
+}
+.hero img{
+    height: 929px;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-blue);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-orange);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER STYLES */
+header {
+    background-color: var(--primary-green);
+    color: var(--text-light);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-container h1 {
+    color: var(--text-light);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-light);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+nav a:hover, nav a.active {
+    background-color: var(--text-light);
+    color: var(--primary-green);
+}
+
+/* MAIN CONTENT STYLES */
+main {
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+/* BUTTON STYLES */
+button, .button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--accent-orange);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-align: center;
+}
+
+button:hover, .button:hover {
+    background-color: #e67d00;
+    transform: translateY(-2px);
+}
+
+.cta-button {
+    background-color: var(--secondary-blue);
+}
+
+.cta-button:hover {
+    background-color: #3a6d99;
+}
+
+/* FORM STYLES */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* FOOTER STYLES */
+footer {
+    background-color: var(--dark-gray);
+    color: var(--text-light);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto 2rem;
+    text-align: left;
+}
+
+.footer-section h3 {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section a {
+    color: var(--text-light);
+}
+
+.footer-section a:hover {
+    color: var(--accent-orange);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-green);
+        flex-direction: column;
+        padding: 1rem;
+        gap: 0.5rem;
+        display: none;
+    }
+    .hero img{
+        height: auto;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        display: block;
+        padding: 0.75rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* UTILITY CLASSES */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}

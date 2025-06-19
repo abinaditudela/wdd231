@@ -1,0 +1,88 @@
+{
+    "services": [
+        {
+            "id": "irrigation",
+            "name": "Irrigation Systems",
+            "shortDescription": "Smart watering solutions for your garden",
+            "description": "We design and install customized irrigation systems that ensure your plants get the right amount of water at the right time. Our systems include smart controllers that adjust watering based on weather conditions.",
+            "image": "Irrigation-system.jpg",
+            "features": [
+                "Automated watering schedules",
+                "Drip irrigation options",
+                "Smart weather-based adjustments",
+                "Water conservation technology",
+                "Professional maintenance plans"
+            ]
+        },
+        {
+            "id": "maintenance",
+            "name": "Garden Maintenance",
+            "shortDescription": "Keep your garden looking its best",
+            "description": "Our comprehensive maintenance services include regular pruning, fertilization, pest control, and seasonal cleanups. We'll keep your outdoor space healthy and beautiful year-round.",
+            "image": "gardenmante.jpg",
+            "features": [
+                "Weekly or bi-weekly visits",
+                "Organic fertilization options",
+                "Integrated pest management",
+                "Seasonal planting rotations",
+                "Soil health monitoring"
+            ]
+        },
+        {
+            "id": "landscaping",
+            "name": "Landscape Design",
+            "shortDescription": "Create your dream outdoor space",
+            "description": "Our landscape designers will work with you to create a beautiful, functional outdoor space tailored to your lifestyle and preferences. From concept to completion, we handle every detail.",
+            "image": "landscape.jpg",
+            "features": [
+                "Custom design consultations",
+                "3D visualizations",
+                "Plant selection guidance",
+                "Hardscape installation",
+                "Lighting design"
+            ]
+        },
+        {
+            "id": "vertical",
+            "name": "Vertical Gardens",
+            "shortDescription": "Living walls for urban spaces",
+            "description": "Transform blank walls into lush, living artworks with our vertical garden systems. Perfect for urban spaces, these gardens improve air quality and create stunning visual impact.",
+            "image": "verticalgarden.jpg",
+            "features": [
+                "Space-saving designs",
+                "Automatic irrigation systems",
+                "Low-maintenance options",
+                "Indoor or outdoor installations",
+                "Custom plant selections"
+            ]
+        },
+        {
+            "id": "artificial",
+            "name": "Artificial Grass",
+            "shortDescription": "Beautiful lawns without the maintenance",
+            "description": "Our premium artificial grass looks and feels like real turf but requires no mowing, watering, or fertilizing. Perfect for play areas, pet spaces, and drought-prone regions.",
+            "image": "artificialgrass.jpg",
+            "features": [
+                "Pet-friendly options",
+                "Realistic look and feel",
+                "Excellent drainage",
+                "UV resistant",
+                "10+ year warranty"
+            ]
+        },
+        {
+            "id": "lighting",
+            "name": "Garden Lighting",
+            "shortDescription": "Illuminate your outdoor space",
+            "description": "Enhance your garden's beauty and security with our professional lighting installations. We design lighting schemes that highlight your landscape's best features while providing safety and security.",
+            "image": "ligth.jpg",
+            "features": [
+                "LED energy-efficient options",
+                "Smart lighting controls",
+                "Path lighting",
+                "Accent lighting",
+                "Solar-powered choices"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidrogarden® | Professional Landscaping Services</title>
+    <meta name="description" content="Professional irrigation, gardening, and decoration services in your area">
+    <meta name="author" content="Adan Tudela">
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Hidrogarden® | Professional Landscaping">
+    <meta property="og:description" content="Professional irrigation, gardening, and decoration services">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/final/images/hero.webp">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/final/index.html">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="Hidrogarden Logo" width="150" height="100" loading="lazy">
+            <h1>Hidrogarden®</h1>
+        </div>
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav id="nav-menu">
+            <a href="index.html" class="active">Home</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source media="(max-width: 600px)" srcset="images/hero.webp">
+                <img src="images/herofull.jpg" alt="Beautiful garden landscape" loading="eager">
+            </picture>
+            <div class="hero-content">
+                <h2>Transforming Outdoor Spaces</h2>
+                <p>Professional irrigation, gardening, and decoration services</p>
+                <a href="#contact" class="cta-button">Get a Free Quote</a>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <img src="images/Irrigation-systems.png" alt="Irrigation systems" width="80" height="80" loading="lazy">
+                <h3>Smart Irrigation</h3>
+                <p>Automated watering solutions for healthy plants</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/garden-services.png" alt="Gardening services" width="80" height="80" loading="lazy">
+                <h3>Expert Gardening</h3>
+                <p>Professional maintenance and care</p>
+            </div>
+            <div class="feature-card">
+                <img src="images/landscapeicon.png" alt="Landscape design" width="80" height="80" loading="lazy">
+                <h3>Creative Design</h3>
+                <p>Beautiful outdoor spaces tailored to you</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-form">
+            <h2>Request a Consultation</h2>
+            <form id="quote-form" method="get" action="form-action.html">
+                <div class="form-group">
+                    <label for="name">Name*</label>
+                    <input type="text" id="name" name="name" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required autocomplete="email" placeholder="example@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Needed</label>
+                    <select id="service" name="service">
+                        <option value="">Select a service...</option>
+                        <option value="irrigation">Irrigation System</option>
+                        <option value="maintenance">Garden Maintenance</option>
+                        <option value="landscaping">Landscaping</option>
+                        <option value="design">Design Consultation</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit Request</button>
+            </form>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <!-- Testimonials will be loaded from JSON -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Hidrogarden®</h3>
+                <p>Professional irrigation, gardening, and decoration services</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <address>
+                    <p>123 Garden Street<br>
+                    Green Valley, CO 12345</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: info@hidrogarden.com</p>
+                </address>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="current-year"></span> Hidrogarden®. All rights reserved.</p>
+            <p><a href="attributions.html">Attributions</a> | <a href="https://youtu.be/yourvideoid" target="_blank">Project Video</a></p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/home.js" type="module"></script>
+</body>
+</html>
