@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 card.innerHTML = `
                     <figure>
-                        <img src="images/attractions/${attraction.image}" alt="${attraction.name}" loading="lazy">
+                        <img src="${attraction.image}" alt="${attraction.name}" loading="lazy">
                     </figure>
                     <div class="card-content">
                         <h3>${attraction.name}</h3>
