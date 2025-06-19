@@ -1,0 +1,52 @@
+{
+    "attractions": [
+        {
+            "name": "Cristo de la Concordia",
+            "address": "Av. de la Concordia, Cochabamba",
+            "description": "The largest Christ statue in the world, offering panoramic views of the city.",
+            "image": "images/cristo-concordia.webp"
+        },
+        {
+            "name": "Palacio Portales",
+            "address": "Av. Potosí 1450, Cochabamba",
+            "description": "A magnificent palace built by Simón Patiño, now a cultural center and museum.",
+            "image": "images/palacioportales.jpg"
+        },
+        {
+            "name": "La Cancha Market",
+            "address": "Between Av. Aroma & Av. 6 de Agosto",
+            "description": "One of the largest open-air markets in South America, full of local products.",
+            "image": "images/lacancha.jpeg"
+        },
+        {
+            "name": "Tunari National Park",
+            "address": "North of Cochabamba",
+            "description": "Beautiful natural park with hiking trails and stunning mountain views.",
+            "image": "images/tunari.jpg"
+        },
+        {
+            "name": "Punta Aranjuez",
+            "address": "Calle Jordán, Cochabamba",
+            "description": "Historic viewpoint with colonial architecture and city vistas.",
+            "image": "images/aranjuez.jpg"
+        },
+        {
+            "name": "Museo Arqueológico",
+            "address": "Calle Jordán E-199, Cochabamba",
+            "description": "Museum showcasing Bolivia's rich archaeological heritage.",
+            "image": "images/mammutknochen.jpg"
+        },
+        {
+            "name": "Laguna Alalay",
+            "address": "Av. Melchor Pérez de Olguín, Cochabamba",
+            "description": "Urban lake perfect for birdwatching and outdoor activities.",
+            "image": "alalay1.jpg"
+        },
+        {
+            "name": "Cine Center",
+            "address": "Av. Melchor Pérez de Olguín, Cochabamba",
+            "description": "Modern entertainment complex with cinemas, restaurants, and shops.",
+            "image": "Cine_Center_Cochabamba.jpg"
+        }
+    ]
+}

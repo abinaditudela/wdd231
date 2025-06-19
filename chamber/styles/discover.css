@@ -1,0 +1,145 @@
+/* DISCOVER PAGE SPECIFIC STYLES */
+.discover-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+#visitor-info {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#visit-message {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #f0f8ff;
+    border-left: 4px solid #007BFF;
+    font-size: 1.1rem;
+}
+
+.demographics ul {
+    padding-left: 1.5rem;
+}
+
+.demographics li {
+    margin-bottom: 0.5rem;
+}
+
+.discover-gallery {
+    margin-top: 1rem;
+}
+
+#attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.attraction-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px);
+}
+
+.attraction-card figure {
+    margin: 0;
+    position: relative;
+}
+
+.attraction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.attraction-card .card-content {
+    padding: 1.2rem;
+}
+
+.attraction-card h3 {
+    color: #006699;
+    margin-bottom: 0.5rem;
+    font-family: var(--heading-font);
+}
+
+.attraction-card address {
+    font-style: normal;
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.attraction-card p {
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.learn-more:hover {
+    background-color: #0056b3;
+}
+
+/* Grid Areas for Different Screen Sizes */
+@media (min-width: 641px) {
+    .discover-container {
+        grid-template-columns: 300px 1fr;
+    }
+    
+    #attractions-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+@media (min-width: 1025px) {
+    #attractions-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: 
+            "card1 card2 card3"
+            "card4 card5 card6"
+            "card7 card8 .";
+    }
+    
+    /* Image hover effects for large screens only */
+    .attraction-card img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+}
+
+/* Assign grid areas to each card */
+#card1 { grid-area: card1; }
+#card2 { grid-area: card2; }
+#card3 { grid-area: card3; }
+#card4 { grid-area: card4; }
+#card5 { grid-area: card5; }
+#card6 { grid-area: card6; }
+#card7 { grid-area: card7; }
+#card8 { grid-area: card8; }

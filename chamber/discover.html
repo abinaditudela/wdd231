@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Cochabamba - Chamber of Commerce">
+    <meta name="author" content="Adan Tudela">
+    <meta property="og:title" content="Discover Cochabamba - Chamber of Commerce">
+    <meta property="og:description" content="Explore the best of Cochabamba">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://abinaditudela.github.io/wdd231/chamber/images/chamber-logo-cut.png">
+    <meta property="og:url" content="https://abinaditudela.github.io/wdd231/chamber/discover.html">
+    <link rel="icon" href="favicon.ico">
+    <title>Discover Cochabamba - Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:opsz@6..96&family=Oswald:wght@200..700&family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/discover.css">
+    <script src="scripts/discover.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/chamber-logo-cut.png" alt="Cochabamba Chamber Logo" class="profile-pic">
+            <h1>Cochabamba Chamber of Commerce</h1>
+        </div>
+    </header>
+    <button id="menu-toggle">☰</button>
+    <nav id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="discover.html" class="active">Discover</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+    </nav>
+    
+    <main class="discover-container">
+        <aside id="visitor-info">
+            <h2>Visitor Information</h2>
+            <div id="visit-message"></div>
+            <div class="demographics">
+                <h3>Cochabamba Demographics</h3>
+                <ul>
+                    <li>Population: 1.9 million</li>
+                    <li>Elevation: 2,558m (8,392ft)</li>
+                    <li>Known as: "City of Eternal Spring"</li>
+                    <li>Founded: 1571</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="discover-gallery">
+            <h2>Discover Cochabamba</h2>
+            <div id="attractions-grid" class="card-view"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="currentYear"></span> Adan Tudela, Cochabamba, Bolivia</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+        <div class="social-links">
+            <a href="#" target="_blank"><img src="images/facebook-icon.webp" alt="Facebook" loading="lazy"></a>
+            <a href="#" target="_blank"><img src="images/instagram-icon.webp" alt="Instagram" loading="lazy"></a>
+            <a href="#" target="_blank"><img src="images/twitter-icon.webp" alt="Twitter" loading="lazy"></a>
+        </div>
+    </footer>
+</body>
+</html>
